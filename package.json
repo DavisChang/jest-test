@@ -14,7 +14,7 @@
     ],
     "rootDir": "",
     "scriptPreprocessor": "./scripts/jest/preprocessor.js",
-    "setupEnvScriptFile": "scripts/jest/environment.js",
+    "setupEnvScriptFile": "./scripts/jest/environment.js",
     "unmockedModulePathPatterns": [
       "fbjs",
       "react"
@@ -28,7 +28,7 @@
     "superagent-promise": "^1.0.3"
   },
   "devDependencies": {
-    "jest-cli": "^0.8.1",
+    "jest-cli": "^0.8.2",
     "nock": "^9.0.2"
   }
 }

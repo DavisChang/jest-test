@@ -8,7 +8,7 @@ var agent = require('superagent-promise')(superagent, Promise);
 jest.dontMock('superagent');
 jest.dontMock('superagent-promise');
 
-describe('china review actions', function () {
+describe('jest actions', function () {
 
   beforeEach(() => {
     nock.cleanAll();
@@ -30,8 +30,13 @@ describe('china review actions', function () {
       .end()
       .then((response) => {
         console.log('response:', response.status);
+        console.log('response:', response.body);
+        
+        // no result ?????????????
+        expect(response.status).toBe(500);
+
       }, (error) => {
-        console.log('error:', error.status);
+        console.log('error1:', error.status);
         throw error;
       }).then(
         () => {
