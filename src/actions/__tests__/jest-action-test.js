@@ -3,10 +3,11 @@
 jest.dontMock('nock');
 var nock = require('nock');
 
-var superagent = require('superagent');
-var agent = require('superagent-promise')(superagent, Promise);
 jest.dontMock('superagent');
 jest.dontMock('superagent-promise');
+var superagent = require('superagent');
+var agent = require('superagent-promise')(superagent, Promise);
+
 
 describe('jest actions', function () {
 
